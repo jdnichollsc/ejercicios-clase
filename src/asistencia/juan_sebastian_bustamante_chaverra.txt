@@ -1,1 +1,1 @@
-BAMBU BOOTCAMP
+Viva Python AND django
