@@ -25,3 +25,4 @@ LISTA DE ASISTENCIA PARA ESTE EJERCICIO:
 - Andres felipe Carvajal
 - [Jesus Mendoza Martinez](https://github.com/JsMendoza13)
 - Josue Duque Gutierrez
+- [Daniel Benitez Restrepo](https://github.com/da8y01)
