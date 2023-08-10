@@ -20,7 +20,7 @@ LISTA DE ASISTENCIA PARA ESTE EJERCICIO:
 - [Daniel Pérez Vitola](https://github.com/dapevi1997)
 - Jonathan Marin Pavia
 - [Anderson Gomez Tobon](https://github.com/KitLuc)
-- Angel Andres Santana Valencia
+- Angel Andres Santana Valencia(https://github.com/andresk5)
 - Beatriz Elena Gutierrez
 - Andres felipe Carvajal
 - [Jesus Mendoza Martinez](https://github.com/JsMendoza13)
