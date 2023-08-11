@@ -10,6 +10,7 @@ LISTA DE ASISTENCIA PARA ESTE EJERCICIO:
 - [Giovanny Salcedo](https://github.com/GioSalcedo)
 
 +Alexander Saldarriaga Vélez
+
 - [Carlos Mario Herrera Acevedo](https://github.com/soycarlosherrera/)
 
 -Jhon Edison Muñoz Banguero
