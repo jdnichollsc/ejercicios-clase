@@ -48,7 +48,7 @@ contract MultifirmaConOraculo is Ownable {
 
         uint256 ethPriceInUsd = uint256(price);
 
-        uint256 usdAmount = (_ethAmount * ethPriceInUsd) / 1e18;
+        uint256 usdAmount = (_ethAmount * ethPriceInUsd) / 1e18; //1 ETH = 1e18 wei
 
         //ya pasa esa información a estar disponible en el contrato
         monto = usdAmount;
