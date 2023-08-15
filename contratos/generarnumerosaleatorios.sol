@@ -11,7 +11,7 @@ contract GeneradorNumerosAleatorios is VRFConsumerBase {
     uint256 public numeroAleatorio;
 
     constructor(address _vrfCoordinator, address _linkToken, bytes32 _keyHash, uint256 _fee)
-        VRFConsumerBase(_vrfCoordinator, _linkToken)
+        VRFConsumerBase(_vrfCoordinator, _linkToken) //inicializar de manera interna sus valores
     {
         keyHash = _keyHash;
         fee = _fee;
@@ -24,5 +24,6 @@ contract GeneradorNumerosAleatorios is VRFConsumerBase {
 
     function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
         numeroAleatorio = randomness;
+        //emitir evento 
     }
 }
