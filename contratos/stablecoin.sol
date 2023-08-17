@@ -31,6 +31,21 @@ contract Stablecoin is ERC20 {
         _burn(msg.sender, _amount);
     }
 
+/*     function mantenerParidad() external {
+        (, int256 assetValue, , , ) = assetValueFeed.latestRoundData();
+        uint256 adjustedPeggedValue = uint256(assetValue);
+        uint256 currentSupply = totalSupply();
+        // Calcula la cantidad de stablecoins que deben ser minteadas o quemadas para mantener la paridad.
+        if (adjustedPeggedValue > peggedValue) {
+            uint256 amountToMint = (adjustedPeggedValue - peggedValue) * currentSupply / peggedValue;
+            _mint(owner(), amountToMint);
+        } else if (adjustedPeggedValue < peggedValue) {
+            uint256 amountToBurn = (peggedValue - adjustedPeggedValue) * currentSupply / peggedValue;
+            _burn(owner(), amountToBurn);
+        }
+        peggedValue = adjustedPeggedValue;
+    } */
+
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
         uint256 adjustedAmount = (amount * 1 ether) / peggedValue;
         return super.transfer(recipient, adjustedAmount);
