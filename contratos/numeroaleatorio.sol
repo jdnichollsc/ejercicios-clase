@@ -14,7 +14,8 @@ contract GeneradorNumerosAleatorios is VRFConsumerBase {
         address _linkToken,
         bytes32 _keyHash,
         uint256 _fee
-    ) VRFConsumerBase(_vrfCoordinator, _linkToken) {
+    ) VRFConsumerBase(_vrfCoordinator, _linkToken) 
+    {
         keyHash = _keyHash;
         fee = _fee;
     }
