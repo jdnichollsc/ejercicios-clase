@@ -7,6 +7,7 @@ contract ContratoConCondicion {
     AggregatorV3Interface internal priceFeed;
 
     constructor(address _priceFeed) {
+        //Instancia ya llena del PriceFeed
         priceFeed = AggregatorV3Interface(_priceFeed);
     }
 

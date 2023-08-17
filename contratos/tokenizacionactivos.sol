@@ -7,19 +7,28 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract TokenizacionDeActivos is ERC20 {
     AggregatorV3Interface internal assetValueFeed;
 
-    constructor(address _assetValueFeed, string memory _name, string memory _symbol) ERC20(_name, _symbol) {
+    constructor(address _assetValueFeed, string memory _name, string memory _symbol) 
+    ERC20(_name, _symbol) 
+    {
         assetValueFeed = AggregatorV3Interface(_assetValueFeed);
     }
 
     function emitirTokens(uint256 _amount) external {
         require(msg.sender == owner(), "Solo el propietario puede emitir");
         
-        // Emitir tokens al propietario de acuerdo al valor del activo.
+        (, int256 assetValue, , , ) = assetValueFeed.latestRoundData();
+        
+        uint256 tokensToMint = uint256(assetValue) * _amount;
+
+        _mint(msg.sender, tokensToMint);
     }
 
     function quemarTokens(uint256 _amount) external {
         require(msg.sender == owner(), "Solo el propietario puede quemar");
         
-        // Quemar tokens al propietario y actualizar el valor del activo.
+        (, int256 assetValue, , , ) = assetValueFeed.latestRoundData();
+        
+        uint256 tokensToBurn = uint256(assetValue) * _amount;
+        _burn(msg.sender, tokensToBurn);
     }
 }
